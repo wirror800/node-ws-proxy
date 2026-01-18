@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Network - Protect Earth</title>
+    <title>铜都 - 千年铜韵，魅力之城</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Microsoft YaHei', 'SimHei', sans-serif;
         }
 
         :root {
-            --primary: #2e7d32;
-            --secondary: #4caf50;
-            --accent: #8bc34a;
-            --light: #e8f5e9;
-            --dark: #1b5e20;
+            --primary: #b8860b;
+            --secondary: #cd853f;
+            --accent: #daa520;
+            --light: #fff8dc;
+            --dark: #654321;
             --text: #333333;
             --white: #ffffff;
         }
@@ -26,17 +26,17 @@
         body {
             background-color: var(--light);
             color: var(--text);
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
         header {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: var(--white);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .container {
@@ -54,13 +54,15 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 1.8rem;
+            gap: 12px;
+            font-size: 2rem;
             font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .logo i {
-            font-size: 2rem;
+            font-size: 2.5rem;
+            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
         }
 
         nav ul {
@@ -69,20 +71,21 @@
         }
 
         nav ul li {
-            margin-left: 2rem;
+            margin-left: 2.5rem;
         }
 
         nav ul li a {
             color: var(--white);
             text-decoration: none;
             font-weight: 500;
+            font-size: 1.05rem;
             transition: all 0.3s ease;
             padding: 0.5rem 0;
             position: relative;
         }
 
         nav ul li a:hover {
-            color: var(--accent);
+            color: #ffd700;
         }
 
         nav ul li a::after {
@@ -91,8 +94,8 @@
             bottom: 0;
             left: 0;
             width: 0;
-            height: 2px;
-            background-color: var(--accent);
+            height: 3px;
+            background: linear-gradient(to right, #ffd700, #ffed4e);
             transition: width 0.3s ease;
         }
 
@@ -101,63 +104,121 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), 
+                        url('https://images.unsplash.com/photo-1508804185872-d7badad00f7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
-            height: 80vh;
+            background-attachment: fixed;
+            height: 85vh;
             display: flex;
             align-items: center;
             text-align: center;
             color: var(--white);
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            letter-spacing: 3px;
+            animation: fadeInDown 1s ease;
         }
 
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .btn {
             display: inline-block;
-            background-color: var(--accent);
+            background: linear-gradient(135deg, var(--accent), var(--primary));
             color: var(--white);
-            padding: 0.8rem 2rem;
+            padding: 1rem 2.5rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 20px rgba(218, 165, 32, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
         }
 
         .btn:hover {
-            background-color: var(--primary);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(218, 165, 32, 0.6);
         }
 
         section {
-            padding: 5rem 0;
+            padding: 6rem 0;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
         .section-title h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: var(--primary);
             margin-bottom: 1rem;
             position: relative;
@@ -167,191 +228,330 @@
         .section-title h2::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--accent);
-            border-radius: 2px;
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(to right, var(--accent), var(--primary));
+            border-radius: 3px;
         }
 
         .section-title p {
             color: var(--text);
+            font-size: 1.15rem;
             max-width: 700px;
-            margin: 0 auto;
+            margin: 1.5rem auto 0;
         }
 
-        .about-content {
+        .intro-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 4rem;
             align-items: center;
         }
 
-        .about-img {
-            border-radius: 10px;
+        .intro-img {
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            position: relative;
         }
 
-        .about-img img {
+        .intro-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(184, 134, 11, 0.2), transparent);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .intro-img:hover::before {
+            opacity: 1;
+        }
+
+        .intro-img img {
             width: 100%;
             height: auto;
             display: block;
-            transition: transform 0.5s ease;
+            transition: transform 0.6s ease;
         }
 
-        .about-img:hover img {
-            transform: scale(1.05);
+        .intro-img:hover img {
+            transform: scale(1.08);
         }
 
-        .about-text h3 {
-            font-size: 1.8rem;
+        .intro-text h3 {
+            font-size: 2rem;
             margin-bottom: 1.5rem;
             color: var(--dark);
         }
 
-        .about-text p {
+        .intro-text p {
             margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            line-height: 2;
         }
 
         .stats {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
-            margin-top: 3rem;
+            margin-top: 4rem;
         }
 
         .stat-item {
             text-align: center;
-            padding: 2rem 1rem;
-            background-color: var(--white);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
+            padding: 2.5rem 1.5rem;
+            background: linear-gradient(135deg, var(--white), var(--light));
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
         }
 
         .stat-item:hover {
-            transform: translateY(-10px);
+            transform: translateY(-15px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 40px rgba(218, 165, 32, 0.3);
         }
 
         .stat-item i {
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: var(--primary);
             margin-bottom: 1rem;
+            filter: drop-shadow(0 5px 10px rgba(184, 134, 11, 0.3));
         }
 
         .stat-item h3 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: var(--dark);
             margin-bottom: 0.5rem;
+            font-weight: 700;
         }
 
         .stat-item p {
             color: var(--text);
+            font-size: 1.05rem;
         }
 
-        .initiatives {
-            background-color: var(--white);
+        .scenery {
+            background: linear-gradient(135deg, var(--white), var(--light));
         }
 
-        .initiatives-grid {
+        .scenery-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
-        .initiative-card {
-            background-color: var(--light);
-            border-radius: 10px;
+        .scenery-card {
+            background-color: var(--white);
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
         }
 
-        .initiative-card:hover {
-            transform: translateY(-10px);
+        .scenery-card:hover {
+            transform: translateY(-12px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 50px rgba(218, 165, 32, 0.3);
         }
 
-        .initiative-img {
-            height: 200px;
+        .scenery-img {
+            height: 250px;
             overflow: hidden;
+            position: relative;
         }
 
-        .initiative-img img {
+        .scenery-img::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .scenery-card:hover .scenery-img::after {
+            opacity: 1;
+        }
+
+        .scenery-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            transition: transform 0.6s ease;
         }
 
-        .initiative-card:hover .initiative-img img {
-            transform: scale(1.1);
+        .scenery-card:hover .scenery-img img {
+            transform: scale(1.15);
         }
 
-        .initiative-content {
-            padding: 1.5rem;
+        .scenery-content {
+            padding: 2rem;
         }
 
-        .initiative-content h3 {
-            font-size: 1.5rem;
+        .scenery-content h3 {
+            font-size: 1.6rem;
             margin-bottom: 1rem;
             color: var(--dark);
         }
 
-        .initiative-content p {
+        .scenery-content p {
             margin-bottom: 1.5rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .food {
+            background-color: var(--white);
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .food-card {
+            background: linear-gradient(135deg, var(--light), var(--white));
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+        }
+
+        .food-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 50px rgba(218, 165, 32, 0.3);
+        }
+
+        .food-img {
+            width: 45%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .food-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .food-card:hover .food-img img {
+            transform: scale(1.12);
+        }
+
+        .food-content {
+            width: 55%;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .food-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .food-content .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            color: var(--white);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            width: fit-content;
+        }
+
+        .food-content p {
+            color: #555;
+            line-height: 1.9;
         }
 
         .cta {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: var(--white);
             text-align: center;
-            padding: 5rem 0;
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.2), transparent);
+            border-radius: 50%;
         }
 
         .cta h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
         }
 
         .cta p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            position: relative;
+            z-index: 1;
         }
 
         .cta .btn {
-            background-color: var(--white);
+            background: var(--white);
             color: var(--primary);
         }
 
         .cta .btn:hover {
-            background-color: var(--accent);
+            background: var(--accent);
             color: var(--white);
         }
 
         footer {
             background-color: var(--dark);
             color: var(--white);
-            padding: 3rem 0 1rem;
+            padding: 3rem 0 1.5rem;
         }
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
             margin-bottom: 2rem;
         }
 
         .footer-column h3 {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             margin-bottom: 1.5rem;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 12px;
         }
 
         .footer-column h3::after {
@@ -359,46 +559,29 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 40px;
-            height: 2px;
-            background-color: var(--accent);
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(to right, var(--accent), var(--primary));
         }
 
         .footer-column p {
             margin-bottom: 1rem;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-links li a {
-            color: var(--light);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .footer-links li a:hover {
-            color: var(--accent);
-            padding-left: 5px;
+            line-height: 1.8;
         }
 
         .social-links {
             display: flex;
-            gap: 1rem;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
         }
 
         .social-links a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
             border-radius: 50%;
             color: var(--white);
             text-decoration: none;
@@ -406,14 +589,15 @@
         }
 
         .social-links a:hover {
-            background-color: var(--accent);
-            transform: translateY(-5px);
+            transform: translateY(-8px) rotate(360deg);
+            box-shadow: 0 8px 20px rgba(218, 165, 32, 0.5);
         }
 
         .copyright {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 2rem;
         }
 
         .mobile-menu {
@@ -423,16 +607,16 @@
         }
 
         @media (max-width: 992px) {
-            .about-content {
+            .intro-content {
                 grid-template-columns: 1fr;
             }
             
-            .initiatives-grid {
+            .scenery-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             
-            .footer-content {
-                grid-template-columns: repeat(2, 1fr);
+            .food-grid {
+                grid-template-columns: 1fr;
             }
             
             .stats {
@@ -455,11 +639,11 @@
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background-color: var(--primary);
+                background: linear-gradient(135deg, var(--primary), var(--secondary));
                 flex-direction: column;
                 padding: 1rem 0;
                 text-align: center;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             }
             
             nav ul.active {
@@ -468,15 +652,24 @@
             
             nav ul li {
                 margin: 0;
-                padding: 0.8rem 0;
+                padding: 1rem 0;
             }
             
             .mobile-menu {
                 display: block;
             }
             
-            .initiatives-grid {
+            .scenery-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .food-card {
+                flex-direction: column;
+            }
+            
+            .food-img,
+            .food-content {
+                width: 100%;
             }
             
             .footer-content {
@@ -487,197 +680,234 @@
                 grid-template-columns: 1fr;
             }
         }
-
-        /* Animation for stats counter */
-        .counter {
-            transition: all 0.5s ease;
-        }
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- 页头 -->
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <i class="fas fa-seedling"></i>
-                <span>Green Network</span>
+                <i class="fas fa-gem"></i>
+                <span>铜都</span>
             </div>
             <nav>
                 <div class="mobile-menu">
                     <i class="fas fa-bars"></i>
                 </div>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#initiatives">Initiatives</a></li>
-                    <li><a href="#get-involved">Get Involved</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#intro">城市简介</a></li>
+                    <li><a href="#scenery">风光名胜</a></li>
+                    <li><a href="#food">特色美食</a></li>
+                    <li><a href="#contact">联系我们</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- 英雄区域 -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h1>Protect Our Planet, Preserve Our Future</h1>
-            <p>Join the global movement to create a sustainable world through conservation, education, and community action.</p>
-            <a href="#get-involved" class="btn">Join Our Network</a>
+            <h1>铜都</h1>
+            <p>千年铜韵铸就辉煌历史，山水之间演绎无限风光</p>
+            <a href="#intro" class="btn">探索铜都</a>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
+    <!-- 城市简介 -->
+    <section id="intro">
         <div class="container">
             <div class="section-title">
-                <h2>About Green Network</h2>
-                <p>We are a global community dedicated to environmental protection and sustainable development.</p>
+                <h2>古铜之都，魅力之城</h2>
+                <p>这里是中国青铜文化的发源地，拥有三千年的采冶历史</p>
             </div>
-            <div class="about-content">
-                <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team planting trees">
+            <div class="intro-content">
+                <div class="intro-img">
+                    <img src="https://images.unsplash.com/photo-1564859228273-274232fdb516?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="铜都城市风光">
                 </div>
-                <div class="about-text">
-                    <h3>Our Mission</h3>
-                    <p>Green Network is committed to creating a sustainable future by protecting natural ecosystems, promoting renewable energy, and empowering communities to take environmental action.</p>
-                    <p>Founded in 2010, we've grown from a small grassroots organization to an international network with over 50,000 members across 120 countries.</p>
-                    <p>Our approach combines scientific research, community engagement, and policy advocacy to address the most pressing environmental challenges of our time.</p>
-                    <a href="#" class="btn">Learn More</a>
+                <div class="intro-text">
+                    <h3>悠久历史 璀璨文明</h3>
+                    <p>铜都，因铜而兴，以铜闻名。这座城市拥有三千多年的采冶历史，是中国古代青铜文化的重要发源地之一。从商周时期开始，这里就因丰富的铜矿资源而成为冶炼中心。</p>
+                    <p>如今的铜都，不仅保留着深厚的历史文化底蕴，更以现代化的城市面貌展现着蓬勃发展的活力。青山绿水环绕，人文景观与自然风光交相辉映，是一座宜居宜游的美丽城市。</p>
+                    <p>走进铜都，您将感受到历史与现代的完美融合，体验独特的铜文化魅力，品尝地道的特色美食，领略山水之间的自然风光。</p>
+                    <a href="#scenery" class="btn">了解更多</a>
                 </div>
             </div>
             <div class="stats">
                 <div class="stat-item">
-                    <i class="fas fa-tree"></i>
-                    <h3 class="counter" data-target="2500000">0</h3>
-                    <p>Trees Planted</p>
+                    <i class="fas fa-history"></i>
+                    <h3 class="counter" data-target="3000">0</h3>
+                    <p>年采冶历史</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-users"></i>
-                    <h3 class="counter" data-target="50000">0</h3>
-                    <p>Active Members</p>
+                    <i class="fas fa-mountain"></i>
+                    <h3 class="counter" data-target="15">0</h3>
+                    <p>著名景点</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-globe-americas"></i>
-                    <h3 class="counter" data-target="120">0</h3>
-                    <p>Countries Reached</p>
+                    <i class="fas fa-utensils"></i>
+                    <h3 class="counter" data-target="50">0</h3>
+                    <p>特色美食</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-recycle"></i>
-                    <h3 class="counter" data-target="1500">0</h3>
-                    <p>Cleanup Projects</p>
+                    <i class="fas fa-award"></i>
+                    <h3 class="counter" data-target="8">0</h3>
+                    <p>国家级荣誉</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Initiatives Section -->
-    <section class="initiatives" id="initiatives">
+    <!-- 风光名胜 -->
+    <section class="scenery" id="scenery">
         <div class="container">
             <div class="section-title">
-                <h2>Our Initiatives</h2>
-                <p>Discover the key programs and projects we're implementing to protect our planet.</p>
+                <h2>风光名胜</h2>
+                <p>山水相依，景色如画，探寻铜都的自然与人文之美</p>
             </div>
-            <div class="initiatives-grid">
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://dialogue.earth/content/uploads/2021/04/lessons-from-the-rush-to-reforest-china-dialogue-2400x1599.jpg" alt="Reforestation">
+            <div class="scenery-grid">
+                <div class="scenery-card">
+                    <div class="scenery-img">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="天井湖">
                     </div>
-                    <div class="initiative-content">
-                        <h3>Global Reforestation</h3>
-                        <p>Planting millions of trees worldwide to restore ecosystems, combat climate change, and protect biodiversity.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
-                </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Ocean Conservation">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Ocean Conservation</h3>
-                        <p>Protecting marine ecosystems, reducing plastic pollution, and promoting sustainable fishing practices.</p>
-                        <a href="#" class="btn">Learn More</a>
+                    <div class="scenery-content">
+                        <h3>天井湖公园</h3>
+                        <p>碧波荡漾的湖面如同镶嵌在城市中的明珠，湖心岛上古塔巍峨，亭台楼阁错落有致。春日繁花似锦，夏日荷香四溢，秋日层林尽染，冬日雪景如画，四季皆有不同美景。</p>
+                        <a href="#" class="btn">了解详情</a>
                     </div>
                 </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Renewable Energy">
+                <div class="scenery-card">
+                    <div class="scenery-img">
+                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="铜官山">
                     </div>
-                    <div class="initiative-content">
-                        <h3>Renewable Energy</h3>
-                        <p>Promoting solar, wind, and other clean energy sources to reduce dependence on fossil fuels.</p>
-                        <a href="#" class="btn">Learn More</a>
+                    <div class="scenery-content">
+                        <h3>铜官山</h3>
+                        <p>作为铜都的象征，铜官山见证了这座城市三千年的采冶历史。登山远眺，城市全景尽收眼底。山上保留着古代矿井遗址，展现着铜文化的深厚底蕴，是了解铜都历史的必游之地。</p>
+                        <a href="#" class="btn">了解详情</a>
+                    </div>
+                </div>
+                <div class="scenery-card">
+                    <div class="scenery-img">
+                        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="长江风光带">
+                    </div>
+                    <div class="scenery-content">
+                        <h3>长江风光带</h3>
+                        <p>沿江而建的景观带蜿蜒数公里，江风拂面，波光粼粼。傍晚时分，夕阳西下，江面泛起金色涟漪，渔船归航，呈现出一幅动人的江南画卷。是市民休闲娱乐的好去处。</p>
+                        <a href="#" class="btn">了解详情</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta" id="get-involved">
+    <!-- 特色美食 -->
+    <section class="food" id="food">
         <div class="container">
-            <h2>Join Our Global Movement</h2>
-            <p>Together, we can create a sustainable future for generations to come. Every action counts, no matter how small.</p>
-            <a href="#" class="btn">Become a Member</a>
+            <div class="section-title">
+                <h2>特色美食</h2>
+                <p>舌尖上的铜都，品味地道的家乡味道</p>
+            </div>
+            <div class="food-grid">
+                <div class="food-card">
+                    <div class="food-img">
+                        <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="铜陵大肠">
+                    </div>
+                    <div class="food-content">
+                        <span class="badge">传统名菜</span>
+                        <h3>铜陵大肠</h3>
+                        <p>这道名菜选用优质猪大肠，经过精心处理和烹制，肥而不腻，香味浓郁。外酥里嫩，口感Q弹，配以秘制酱料，回味无穷。是铜都宴席上必不可少的一道硬菜，深受本地人和游客喜爱。</p>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <div class="food-img">
+                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="顺安酥糖">
+                    </div>
+                    <div class="food-content">
+                        <span class="badge">传统糕点</span>
+                        <h3>顺安酥糖</h3>
+                        <p>有着百年历史的传统糕点，选用优质芝麻、麦芽糖等原料精制而成。入口即化，香甜酥脆，甜而不腻。金黄色的外观透着诱人光泽，是馈赠亲友、品茗休闲的上佳选择。</p>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <div class="food-img">
+                        <img src="https://images.unsplash.com/photo-1626844131082-256783844137?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="铜陵生姜">
+                    </div>
+                    <div class="food-content">
+                        <span class="badge">地理标志</span>
+                        <h3>铜陵白姜</h3>
+                        <p>铜陵白姜以其独特的品质闻名全国，姜块肥大、皮薄肉嫩、汁多渣少、香味浓郁。既可作为调味品提鲜增香，也可制成姜茶、姜糖等养生食品。是国家地理标志保护产品，深受消费者青睐。</p>
+                    </div>
+                </div>
+                <div class="food-card">
+                    <div class="food-img">
+                        <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="野雀舌">
+                    </div>
+                    <div class="food-content">
+                        <span class="badge">特色小吃</span>
+                        <h3>野雀舌</h3>
+                        <p>铜都特有的传统小吃，形似雀舌而得名。采用优质面粉和多种配料手工制作，口感筋道，味道鲜美。可煮可炒，搭配各种汤料或炒制，都别有风味，是当地人从小吃到大的美味记忆。</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- 号召行动区域 -->
+    <section class="cta">
+        <div class="container">
+            <h2>欢迎来到铜都</h2>
+            <p>千年铜韵等您来探索，山水美景邀您来欣赏，特色美食请您来品尝</p>
+            <a href="#contact" class="btn">联系我们</a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Green Network</h3>
-                    <p>We are dedicated to protecting our planet through collaborative action, education, and sustainable solutions.</p>
+                    <h3>关于铜都</h3>
+                    <p>铜都，一座有着三千年采冶历史的文化名城，青铜文化的发源地，山水交融的魅力之城。</p>
+                    <p>我们致力于传承铜文化，发展旅游产业，让更多人了解这座美丽的城市。</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-qq"></i></a>
+                        <a href="#"><i class="fab fa-bilibili"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#initiatives">Initiatives</a></li>
-                        <li><a href="#get-involved">Get Involved</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
+                    <h3>热门景点</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 天井湖公园</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 铜官山国家矿山公园</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 长江风光带</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 铜文化博物馆</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 凤凰山风景区</p>
                 </div>
                 <div class="footer-column">
-                    <h3>Our Programs</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Reforestation</a></li>
-                        <li><a href="#">Ocean Cleanup</a></li>
-                        <li><a href="#">Wildlife Protection</a></li>
-                        <li><a href="#">Climate Education</a></li>
-                        <li><a href="#">Sustainable Agriculture</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Copper Creek Drive, New York</p>
-                    <p><i class="fas fa-phone"></i> +1 (312) 171-0771</p>
-                    <p><i class="fas fa-envelope"></i> support@greennetwork.org</p>
+                    <h3>联系方式</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 安徽省铜陵市</p>
+                    <p><i class="fas fa-phone"></i> 旅游咨询：400-123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@tongdu-tourism.cn</p>
+                    <p><i class="fas fa-clock"></i> 工作时间：周一至周日 8:00-18:00</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Green Network. All rights reserved.</p>
+                <p>&copy; 2025 铜都文化旅游. 保留所有权利 | 我爱我的家乡</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
+        // 移动端菜单切换
         document.querySelector('.mobile-menu').addEventListener('click', function() {
             document.querySelector('nav ul').classList.toggle('active');
         });
 
-        // Counter Animation
+        // 数字计数动画
         function animateCounters() {
             const counters = document.querySelectorAll('.counter');
-            const speed = 200; // The lower the slower
+            const speed = 200;
             
             counters.forEach(counter => {
                 const target = +counter.getAttribute('data-target');
@@ -689,15 +919,15 @@
                     counter.innerText = Math.ceil(count + inc);
                     setTimeout(animateCounters, 1);
                 } else {
-                    counter.innerText = target;
+                    counter.innerText = target.toLocaleString();
                 }
             });
         }
 
-        // Initialize counters when page loads
+        // 页面加载时初始化计数器
         window.addEventListener('load', animateCounters);
 
-        // Smooth scrolling for navigation links
+        // 平滑滚动
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -716,7 +946,29 @@
                 }
             });
         });
+
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 为卡片元素添加初始样式和观察
+        document.querySelectorAll('.scenery-card, .food-card, .stat-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
     </script>
 </body>
-
 </html>
